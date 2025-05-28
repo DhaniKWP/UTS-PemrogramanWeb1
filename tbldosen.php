@@ -6,7 +6,7 @@
             <th width="5%">NO</th>
             <th width="15%">NID</th>
             <th width="55%">NAMA</th>
-            <th width="15%">PRODI</th>
+            <th width="15%">PENDIDIKAN</th>
             <th width="15%"><a href="insertdoseninput.php">TINDAKAN</a></th>
           </tr>
         </thead>
