@@ -7,7 +7,7 @@ $tujuan = 'dhanidosen.php';
 if (isset($_POST['submit'])) {
     $nid = $_POST['nid'];
     $nama = $_POST['nama'];
-    $prodi = $_POST['prodi'];
+    $pendidikan = $_POST['pendidikan'];
 
     $check_query = "SELECT dhaniDosenNid FROM dhanidosen WHERE dhaniDosenNid = '$nid'";
     $check_result = mysqli_query($connectdb, $check_query);
@@ -15,8 +15,8 @@ if (isset($_POST['submit'])) {
     if (mysqli_num_rows($check_result) > 0) {
         $pesan = "NID $nid sudah ada dalam database!";
     } else {
-        $query = "INSERT INTO dhanidosen (dhaniDosenNid, dhaniDosenNama, dhaniDosenProdi) 
-                  VALUES ('$nid', '$nama', '$prodi')";
+        $query = "INSERT INTO dhanidosen (dhaniDosenNid, dhaniDosenNama, dhaniDosenPendidikan) 
+                  VALUES ('$nid', '$nama', '$pendidikan')";
         
         if (mysqli_query($connectdb, $query)) {
             $pesan = "Data berhasil ditambahkan!";
@@ -43,8 +43,8 @@ if (isset($_POST['submit'])) {
             <input type="text" name="nama" required maxlength="50">
         </div>
         <div class="form-group">
-            <label>Program Studi:</label>
-            <input type="text" name="prodi" required maxlength="30">
+            <label>Pendidikan:</label>
+            <input type="text" name="pendidikan" required maxlength="30">
         </div>
         
         <div class="button-group">

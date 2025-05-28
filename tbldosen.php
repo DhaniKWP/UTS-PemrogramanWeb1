@@ -5,7 +5,7 @@
           <tr>
             <th width="5%">NO</th>
             <th width="15%">NID</th>
-            <th width="55%">NAMA</th>
+            <th width="50%">NAMA</th>
             <th width="15%">PENDIDIKAN</th>
             <th width="15%"><a href="insertdoseninput.php">TINDAKAN</a></th>
           </tr>
@@ -21,7 +21,7 @@
             <td><?php echo $no++;?></td>
             <td><?php echo $dhani["dhaniDosenNid"];?></td>
             <td><?php echo $dhani["dhaniDosenNama"];?></td>
-            <td><?php echo $dhani["dhaniDosenProdi"];?></td>
+            <td><?php echo $dhani["dhaniDosenPendidikan"];?></td>
             <td><a href="hapusdosen.php?id=<?php echo $dhani["dhaniDosenNid"];?>">HAPUS</a></td>
             
           </tr>
